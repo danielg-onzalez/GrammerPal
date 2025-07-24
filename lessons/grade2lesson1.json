@@ -1,0 +1,74 @@
+
+    {
+  "id": "grade2-ending-punctuation",
+  "title": "Ending Sentences with Punctuation",
+  "gradeLevels": [2],
+  "subject": "Grammar",
+  "topic": "Punctuation",
+  "objective": "Students will learn to end sentences with periods, question marks, or exclamation points.",
+  "estimatedDurationMinutes": 12,
+  "lessonFlow": [
+    {
+      "type": "introduction",
+      "content": "Every sentence needs the right punctuation at the end. Let’s find out which one to use!"
+    },
+    {
+      "type": "explanation",
+      "rules": [
+        {
+          "rule": "Use a period for a regular sentence.",
+          "example": "I like dogs."
+        },
+        {
+          "rule": "Use a question mark when you ask something.",
+          "example": "Do you like cats?"
+        },
+        {
+          "rule": "Use an exclamation mark to show excitement.",
+          "example": "Wow, that was fun!"
+        }
+      ]
+    },
+    {
+      "type": "practice",
+      "activities": [
+        {
+          "activityType": "multipleChoice",
+          "question": "Which punctuation ends a question?",
+          "options": [
+            ".",
+            "!",
+            "?"
+          ],
+          "correctIndex": 2,
+          "explanation": "Questions end with a question mark."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "questions": [
+        {
+          "question": "How old are you",
+          "answer": "?"
+        }
+      ]
+    },
+    {
+      "type": "aiPrompt",
+      "instruction": "Write one sentence with a question mark and one with an exclamation mark.",
+      "aiEvaluation": true
+    },
+    {
+      "type": "feedback",
+      "message": "Great job using punctuation marks!"
+    }
+  ],
+  "rewards": {
+    "points": 30,
+    "badge": "Punctuation Pro",
+    "unlocksNextLesson": true
+  },
+  "nextLessonId": "grade2-common-nouns"
+}
+

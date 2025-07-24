@@ -1,0 +1,74 @@
+
+    {
+  "id": "grade5-conjunctions",
+  "title": "Using Conjunctions to Join Sentences",
+  "gradeLevels": [5],
+  "subject": "Grammar",
+  "topic": "Conjunctions",
+  "objective": "Students will combine ideas using and, but, or, so, and because.",
+  "estimatedDurationMinutes": 15,
+  "lessonFlow": [
+    {
+      "type": "introduction",
+      "content": "Let’s learn how to join two ideas into one strong sentence!"
+    },
+    {
+      "type": "explanation",
+      "rules": [
+        {
+          "rule": "Use 'and' to add ideas.",
+          "example": "She likes cats, and she likes dogs."
+        },
+        {
+          "rule": "Use 'but' to show contrast.",
+          "example": "He is small, but he is fast."
+        },
+        {
+          "rule": "Use 'because' to show reason.",
+          "example": "She stayed home because she was sick."
+        }
+      ]
+    },
+    {
+      "type": "practice",
+      "activities": [
+        {
+          "activityType": "multipleChoice",
+          "question": "Which sentence uses 'but' correctly?",
+          "options": [
+            "I am tired, but I will keep going.",
+            "I am tired but I eat dinner.",
+            "I am tired but I homework."
+          ],
+          "correctIndex": 0,
+          "explanation": "This shows contrast with complete ideas."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "questions": [
+        {
+          "question": "He ran fast ___ he was late.",
+          "answer": "because"
+        }
+      ]
+    },
+    {
+      "type": "aiPrompt",
+      "instruction": "Write a sentence using 'so' and another using 'but'.",
+      "aiEvaluation": true
+    },
+    {
+      "type": "feedback",
+      "message": "Fantastic! You can connect ideas like a pro!"
+    }
+  ],
+  "rewards": {
+    "points": 50,
+    "badge": "Conjunction Commander",
+    "unlocksNextLesson": true
+  },
+  "nextLessonId": "grade5-compound-sentences"
+}
+

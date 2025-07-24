@@ -1,0 +1,69 @@
+
+{
+  "id": "grade1-capitalization",
+  "title": "Capital Letters at the Start of Sentences",
+  "gradeLevels": [1],
+  "subject": "Grammar",
+  "topic": "Capitalization",
+  "objective": "Students will capitalize the first word in a sentence and the word 'I'.",
+  "estimatedDurationMinutes": 10,
+  "lessonFlow": [
+    {
+      "type": "introduction",
+      "content": "Let's learn how to use big letters at the start of a sentence!"
+    },
+    {
+      "type": "explanation",
+      "rules": [
+        {
+          "rule": "Always start a sentence with a capital letter.",
+          "example": "The cat is black."
+        },
+        {
+          "rule": "The word 'I' is always capitalized.",
+          "example": "I like pizza."
+        }
+      ]
+    },
+    {
+      "type": "practice",
+      "activities": [
+        {
+          "activityType": "multipleChoice",
+          "question": "Which sentence is correct?",
+          "options": [
+            "i am happy.",
+            "I am happy.",
+            "i Am Happy."
+          ],
+          "correctIndex": 1,
+          "explanation": "'I' must be capitalized."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "questions": [
+        {
+          "question": "___ went to school.",
+          "answer": "I"
+        }
+      ]
+    },
+    {
+      "type": "aiPrompt",
+      "instruction": "Write a sentence that starts with a capital letter and uses 'I'.",
+      "aiEvaluation": true
+    },
+    {
+      "type": "feedback",
+      "message": "Nice work! Now you know when to use big letters!"
+    }
+  ],
+  "rewards": {
+    "points": 25,
+    "badge": "Capital Champ",
+    "unlocksNextLesson": true
+  },
+  "nextLessonId": "grade1-ending-punctuation"
+}

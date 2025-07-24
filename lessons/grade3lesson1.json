@@ -1,0 +1,70 @@
+
+    {
+  "id": "grade3-subject-verb-agreement",
+  "title": "Matching Subjects and Verbs",
+  "gradeLevels": [3],
+  "subject": "Grammar",
+  "topic": "Subject-Verb Agreement",
+  "objective": "Students will match singular and plural subjects with the correct present-tense verbs.",
+  "estimatedDurationMinutes": 15,
+  "lessonFlow": [
+    {
+      "type": "introduction",
+      "content": "Verbs must match the subject of the sentence. Let's learn how!"
+    },
+    {
+      "type": "explanation",
+      "rules": [
+        {
+          "rule": "If the subject is one person/thing, the verb usually ends in -s.",
+          "example": "He runs."
+        },
+        {
+          "rule": "If the subject is more than one, use the base verb.",
+          "example": "They run."
+        }
+      ]
+    },
+    {
+      "type": "practice",
+      "activities": [
+        {
+          "activityType": "multipleChoice",
+          "question": "Which sentence is correct?",
+          "options": [
+            "They walks home.",
+            "They walk home.",
+            "They walking home."
+          ],
+          "correctIndex": 1,
+          "explanation": "Plural subjects use the base form of the verb."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "questions": [
+        {
+          "question": "She ___ (like) pizza.",
+          "answer": "likes"
+        }
+      ]
+    },
+    {
+      "type": "aiPrompt",
+      "instruction": "Write a sentence using a singular subject and verb that ends in -s.",
+      "aiEvaluation": true
+    },
+    {
+      "type": "feedback",
+      "message": "You're great at matching subjects and verbs!"
+    }
+  ],
+  "rewards": {
+    "points": 40,
+    "badge": "Verb Master",
+    "unlocksNextLesson": true
+  },
+  "nextLessonId": "grade3-past-tense-verbs"
+}
+
