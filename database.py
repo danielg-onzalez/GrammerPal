@@ -96,17 +96,17 @@ def get_user_parental_control_level(connection, username):
     return result[0]
 
 # Update parental control level of user if is student
-def update_parental_control_level(connection, username, password, new_level):
+def update_parental_control_level(connection, username, password, student_username, student_password, new_level):
     cursor = connection.cursor()
     
     # Check credentials
-    if not check_credentials(connection, username, password) or not get_user_role(connection, username) == "student":
+    if not check_credentials(connection, username, password) or not check_credentials(connection, student_username, student_password) or get_user_role(connection, username) == "student":
         return None
     
     # Update data
     new_data = json.dumps(new_level)
     sql = "UPDATE accounts SET parental_control_level = %d WHERE username = %s"
-    cursor.execute(sql, (new_data, username))
+    cursor.execute(sql, (new_data, student_username))
     connection.commit()
     print(f"Updated parental control level for {username}.")
 

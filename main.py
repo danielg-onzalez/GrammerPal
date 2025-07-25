@@ -20,7 +20,7 @@ def main():
     connection = admin_connect_to_database()
     
     # User Role edit/view
-    # update_parental_control_level(connection, username, password, 2)
+    # update_parental_control_level(connection, username, password, student_username, student_password, 2)
     # get_user_role(connection, username)
     
     # Select Lessons
