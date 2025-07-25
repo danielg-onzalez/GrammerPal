@@ -2,6 +2,7 @@ from getpass import getpass
 from mysql.connector import connect, Error
 import json
 
+# Connects directly to admin for ease of use (NOT SAFE!!! Just using for )
 def admin_connect_to_database():
     db_user = "admin"
     db_pass = "7956"

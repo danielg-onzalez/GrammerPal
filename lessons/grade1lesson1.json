@@ -1,12 +1,12 @@
 
 {
-  "id": "grade1-capitalization",
-  "title": "Capital Letters at the Start of Sentences",
+  "id": "grade1-lesson1-capitalization",
+  "title": "Using Capital Letters at the Start of Sentences",
   "gradeLevels": [1],
   "subject": "Grammar",
   "topic": "Capitalization",
-  "objective": "Students will capitalize the first word in a sentence and the word 'I'.",
-  "estimatedDurationMinutes": 10,
+  "objective": "Students will learn to capitalize the first word in a sentence and the word 'I'.",
+  "estimatedDurationMinutes": 5,
   "lessonFlow": [
     {
       "type": "introduction",
@@ -36,8 +36,9 @@
             "I am happy.",
             "i Am Happy."
           ],
-          "correctIndex": 1,
-          "explanation": "'I' must be capitalized."
+          "answer": "A",
+          "explination": "'I' must be capitalized.",
+          "rightAnswer": "Correct!"
         }
       ]
     },
@@ -46,14 +47,15 @@
       "questions": [
         {
           "question": "___ went to school.",
-          "answer": "I"
+          "explination": "Try to talk about yourself and remeber to capitilize!",
+          "answer": "I",
+          "rightAnswer": "Correct!"
         }
       ]
     },
     {
       "type": "aiPrompt",
-      "instruction": "Write a sentence that starts with a capital letter and uses 'I'.",
-      "aiEvaluation": true
+      "instruction": "Write a sentence that starts with a capital letter and uses 'I'."
     },
     {
       "type": "feedback",
@@ -62,8 +64,6 @@
   ],
   "rewards": {
     "points": 25,
-    "badge": "Capital Champ",
-    "unlocksNextLesson": true
-  },
-  "nextLessonId": "grade1-ending-punctuation"
+    "badge": "Capital Champ"
+  }
 }
