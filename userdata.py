@@ -11,9 +11,9 @@ def sign_in(username, password):
     return True
   
 # Sign up using database connection
-def sign_up(username, password):
+def sign_up(username, password, role):
     connection = admin_connect_to_database()
-    add_user(connection, username, password, "")
+    add_user(connection, username, password, role, 1, "")
     close_connection(connection)   
 
 # Update lesson progress
@@ -37,7 +37,7 @@ def update_lesson_progress(username, password, lesson_id, lesson_result):
         try:
             account_data = json.loads(account_data_result[0])
         except:
-            print("Data corrupted, resetting.")
+            print("Data corrupted or empty, resetting.")
             account_data = base_data
     else:
         print("No existing account data, creating new data.")

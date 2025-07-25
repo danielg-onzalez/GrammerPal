@@ -5,9 +5,11 @@ from userdata import *
 
 lesson_file_name = "lessons"
 
+# Return a list of all lessons
 def list_lessons():
     return [file for file in os.listdir(lesson_file_name) if file.endswith(".json")]
 
+# Load a specific lesson
 def load_lesson(lesson_name):
     try:
         file_path = os.path.join(lesson_file_name, lesson_name + ".json")
@@ -17,7 +19,8 @@ def load_lesson(lesson_name):
         print("Lesson not found.")
         return None
 
-def display_lesson(username, lesson):
+# Start lesson and display
+def display_lesson(connection, username, lesson):
     print(f"\nLesson: {lesson['title']}")
     print(f"Objective: {lesson['objective']}")
     print(f"Estimated Time: {lesson['estimatedDurationMinutes']} minutes\n")
@@ -82,7 +85,7 @@ def display_lesson(username, lesson):
             print(f"\nAI Prompt: {section['instruction']}")
             student_input = input("Your response: ")
             print("Asking the AI for feedback...")
-            feedback =  "fake awnser haiiii xD :3" #ask_ai_grammer(username, student_input) Limits sucks huh :/
+            feedback =  "fake awnser haiiii xD :3" #ask_ai_grammer(connection, username, student_input) Limits sucks huh :/
             print(f"AI Feedback:\n{feedback}")
 
         # Print lesson end feedback

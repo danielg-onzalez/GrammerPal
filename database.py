@@ -32,16 +32,16 @@ def close_connection(connection):
     connection.close()
        
 # Add a new user and account data
-def add_user(connection, username, password, account_data):
+def add_user(connection, username, password, role, parental_control_level, account_data):
     cursor = connection.cursor()
     
-    sql = "INSERT INTO accounts (username, password, account_data) VALUES (%s, %s, %s)"
-    try:
-        cursor.execute(sql, (username, password, account_data,))
-        connection.commit()
-        print("User added successfully.")
-    except connect.Error as err:
-        print("Error:", err)
+    sql = "INSERT INTO accounts (username, password, role, parental_control_level, account_data) VALUES (%s, %s, %s, %s, %s)"
+    #try:
+    cursor.execute(sql, (username, password, role, parental_control_level, account_data,))
+    connection.commit()
+    print("User added successfully.")
+    #except connect.Error as err:
+       # print("Error:", err)
 
 # Check is username and password match
 def check_credentials(connection, username, password):
@@ -70,6 +70,46 @@ def get_user_data(connection, username):
         return None
     return result
 
+# Retrieve users role
+def get_user_role(connection, username):
+    cursor = connection.cursor()
+    
+    sql = "SELECT role FROM accounts WHERE username = %s"
+    cursor.execute(sql, (username,))
+    result = cursor.fetchone()
+    if not result:
+        return None
+    return result
+
+# Retrieve the parental control level of user if is student
+def get_user_parental_control_level(connection, username):
+    cursor = connection.cursor()
+    
+    if not get_user_role(connection, username) == "student":
+        return None
+    
+    sql = "SELECT parental_control_level FROM accounts WHERE username = %s"
+    cursor.execute(sql, (username,))
+    result = cursor.fetchone()
+    if not result:
+        return None
+    return result
+
+# Update parental control level of user if is student
+def update_parental_control_level(connection, username, password, new_level):
+    cursor = connection.cursor()
+    
+    # Check credentials
+    if not check_credentials(connection, username, password) or not get_user_role(connection, username) == "student":
+        return None
+    
+    # Update data
+    new_data = json.dumps(new_level)
+    sql = "UPDATE accounts SET parental_control_level = %d WHERE username = %s"
+    cursor.execute(sql, (new_data, username))
+    connection.commit()
+    print(f"Updated parental control level for {username}.")
+
 # Update user data
 def update_user_data(connection, username, password, new_account_data):
     cursor = connection.cursor()
@@ -94,7 +134,7 @@ def print_all_users():
 
     print("All users in database:")
     for row in results:
-        id, username, password, account_data = row
+        id, username, password, account_data, role, parental_control_level = row
         
         # Check if data is empty or null
         if account_data:
@@ -104,7 +144,7 @@ def print_all_users():
                 account_data_result = "Invalid JSON."
         else:
             account_data_result = "No data found."
-
-        print(f"ID: {id} | Username: {username} | Password: {password} | Account Data: {account_data_result}")
+        
+        print(f"ID: {id} | Username: {username} | Password: {password} | Role: {role} | Parental Control Level: {parental_control_level} | Account Data: {account_data_result}")
     
     close_connection(connection)
