@@ -76,10 +76,10 @@ def get_user_role(connection, username):
     
     sql = "SELECT role FROM accounts WHERE username = %s"
     cursor.execute(sql, (username,))
-    result = cursor.fetchone()
+    result = cursor.fetchone() 
     if not result:
         return None
-    return result
+    return result[0]
 
 # Retrieve the parental control level of user if is student
 def get_user_parental_control_level(connection, username):
@@ -93,7 +93,7 @@ def get_user_parental_control_level(connection, username):
     result = cursor.fetchone()
     if not result:
         return None
-    return result
+    return result[0]
 
 # Update parental control level of user if is student
 def update_parental_control_level(connection, username, password, new_level):

@@ -61,14 +61,18 @@ def do_lesson(connection):
     
         lesson_choice = input("\nEnter the number of the lesson you'd like to start: ")
 
-        #try:
-        lesson_id = int(lesson_choice) - 1
-        lesson_name = lessons[lesson_id].replace(".json", "")
-        lesson = load_lesson(lesson_name)
-        if lesson:
-            update_lesson_progress(username, password, int(lesson_choice), display_lesson(connection, username, lesson))
-        #except:
-            #print("Invalid choice, please try again.")
+        try:
+            lesson_id = int(lesson_choice) - 1
+            lesson_name = lessons[lesson_id].replace(".json", "")
+            lesson = load_lesson(lesson_name)
+        except:
+            print("Invalid choice, please try again.")
+        try:
+            if lesson:
+                update_lesson_progress(username, password, int(lesson_choice), display_lesson(connection, username, lesson))
+        except:
+            print("Error with loading lesson...")
+            print("Most likely, AI ran out of free uses for now, enable fake feedback in lesson_loader or try again later.")
         
         continue_choice = input("Would you like to do another lesson? Yes [1], No [2].\n")
         match continue_choice:
