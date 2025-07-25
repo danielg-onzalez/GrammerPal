@@ -3,6 +3,9 @@ from userdata import *
 from lesson_loader import *
 from database import *
 
+username = ""
+password = ""
+
 def main():
     # Print basic data
     print("Welcome to GrammarPal!\n")
@@ -11,6 +14,24 @@ def main():
     print_all_users()
     
     # Sign in/up
+    login()
+                
+    # Start connection to database
+    connection = admin_connect_to_database()
+    
+    # User Role edit/view
+    # update_parental_control_level(connection, username, password, 2)
+    # get_user_role(connection, username)
+    
+    # Select Lessons
+    do_lesson(connection)
+            
+    print("Thanks for using GrammarPal! We hope to see you again!")
+    close_connection(connection)
+
+# Login process
+def login():
+    global username, password
     while (True):
         username = input("Please enter your username: ")
         password = input("Please enter your password: ")
@@ -29,16 +50,10 @@ def main():
                         continue
                     sign_up(username, password, role)
                     break
-                
-    # Start connection to database
-    connection = admin_connect_to_database()
-    
-    # User Role edit/view
-    # update_parental_control_level(connection, username, password, 2)
-    # get_user_role(connection, username)
-    
-    # Select Lessons
-    while (True):
+ 
+# Lesson selection and display process
+def do_lesson(connection):
+   while (True):
         lessons = list_lessons()
 
         for lesson_id, file in enumerate(lessons):
@@ -55,14 +70,11 @@ def main():
         #except:
             #print("Invalid choice, please try again.")
         
-        continue_choice = input("Would you like to do another lesson? Yes [1], No [2].")
+        continue_choice = input("Would you like to do another lesson? Yes [1], No [2].\n")
         match continue_choice:
             case "1": continue
             case "2": break
-            
-    print("Thanks for using GrammarPal! We hope to see you again!")
-    close_connection(connection)
-    
+
 main()
 
 # Quick function for updating stuff in database structue

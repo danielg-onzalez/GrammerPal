@@ -85,7 +85,8 @@ def display_lesson(connection, username, lesson):
             print(f"\nAI Prompt: {section['instruction']}")
             student_input = input("Your response: ")
             print("Asking the AI for feedback...")
-            feedback =  "fake awnser haiiii xD :3" #ask_ai_grammer(connection, username, student_input) Limits sucks huh :/
+            # Replace with fake feedback if testing
+            feedback = ask_ai_grammer(connection, username, student_input) #feedback =  "fake awnser haiiii xD :3" Limits sucks huh :/
             print(f"AI Feedback:\n{feedback}")
 
         # Print lesson end feedback
