@@ -4,8 +4,10 @@ from lesson_loader import *
 from database import *
 
 def main():
+    # Print basic data
     print("Welcome to GrammarPal!\n")
     
+    # For testing purposes
     print_all_users()
     
     # Sign in/up
@@ -17,16 +19,25 @@ def main():
             print(f"Welcome back {username}!")
             break
         else:
-            signup_choice = input("We didn't find your account, would you like to try again [1] or signup[2]?")
-            role = input("Are you a \"student\", \"teacher\", or \"parent\"?");
+            signup_choice = input("We didn't find your account, would you like to try again [1] or signup[2]?\n")
             match signup_choice:
                 case "1": continue
                 case "2": 
+                    role = input("Are you a \"student\", \"teacher\", or \"parent\"?\n")
+                    if not role == "student" or not role == "teacher" or not role == "parent":
+                        print("Mistype in role, resetting login process...")
+                        continue
                     sign_up(username, password, role)
                     break
-
-    # Select Lessons
+                
+    # Start connection to database
     connection = admin_connect_to_database()
+    
+    # User Role edit/view
+    # update_parental_control_level(connection, username, password, 2)
+    # get_user_role(connection, username)
+    
+    # Select Lessons
     while (True):
         lessons = list_lessons()
 
@@ -54,6 +65,8 @@ def main():
     
 main()
 
+# Quick function for updating stuff in database structue
+# DO NOT TOUCH!!! It will break everything if done wrong
 def update():
     connection = admin_connect_to_database()
     cursor = connection.cursor()
