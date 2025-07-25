@@ -36,8 +36,8 @@
             "I am happy.",
             "i Am Happy."
           ],
-          "answer": "A",
-          "explination": "'I' must be capitalized.",
+          "answer": "B",
+          "explanation": "'I' must be capitalized.",
           "rightAnswer": "Correct!"
         }
       ]
@@ -47,7 +47,7 @@
       "questions": [
         {
           "question": "___ went to school.",
-          "explination": "Try to talk about yourself and remeber to capitilize!",
+          "explanation": "Try to talk about yourself and remeber to capitilize!",
           "answer": "I",
           "rightAnswer": "Correct!"
         }

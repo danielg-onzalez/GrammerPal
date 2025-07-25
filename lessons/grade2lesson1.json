@@ -6,7 +6,7 @@
   "subject": "Grammar",
   "topic": "Punctuation",
   "objective": "Students will learn to end sentences with periods, question marks, or exclamation points.",
-  "estimatedDurationMinutes": 12,
+  "estimatedDurationMinutes": 6,
   "lessonFlow": [
     {
       "type": "introduction",
@@ -40,8 +40,9 @@
             "!",
             "?"
           ],
-          "correctIndex": 2,
-          "explanation": "Questions end with a question mark."
+          "answer": "C",
+          "explanation": "Questions end with a question mark.",
+          "rightAnswer": "Correct!"
         }
       ]
     },
@@ -49,15 +50,16 @@
       "type": "quiz",
       "questions": [
         {
-          "question": "How old are you",
-          "answer": "?"
+          "question": "How old are you_",
+          "answer": "?",
+          "explanation": "Remeber, what punctuation mark do you end a question with?",
+          "rightAnswer": "Correct!"
         }
       ]
     },
     {
       "type": "aiPrompt",
-      "instruction": "Write one sentence with a question mark and one with an exclamation mark.",
-      "aiEvaluation": true
+      "instruction": "Write one sentence with a question mark and one with an exclamation mark."
     },
     {
       "type": "feedback",
@@ -65,10 +67,8 @@
     }
   ],
   "rewards": {
-    "points": 30,
-    "badge": "Punctuation Pro",
-    "unlocksNextLesson": true
-  },
-  "nextLessonId": "grade2-common-nouns"
+    "points": 25,
+    "badge": "Punctuation Pro"
+  }
 }
 

@@ -6,7 +6,7 @@
   "subject": "Grammar",
   "topic": "Conjunctions",
   "objective": "Students will combine ideas using and, but, or, so, and because.",
-  "estimatedDurationMinutes": 15,
+  "estimatedDurationMinutes": 8,
   "lessonFlow": [
     {
       "type": "introduction",
@@ -40,7 +40,8 @@
             "I am tired but I eat dinner.",
             "I am tired but I homework."
           ],
-          "correctIndex": 0,
+          "answer": "A",
+          "rightAnswer": "Correct!",
           "explanation": "This shows contrast with complete ideas."
         }
       ]
@@ -50,14 +51,15 @@
       "questions": [
         {
           "question": "He ran fast ___ he was late.",
-          "answer": "because"
+          "explanation": "You need to show contrast by using conjunctions!",
+          "answer": "because",
+          "rightAnswer": "Correct!"
         }
       ]
     },
     {
       "type": "aiPrompt",
-      "instruction": "Write a sentence using 'so' and another using 'but'.",
-      "aiEvaluation": true
+      "instruction": "Write a sentence using 'so' and another using 'but'."
     },
     {
       "type": "feedback",
@@ -65,10 +67,8 @@
     }
   ],
   "rewards": {
-    "points": 50,
-    "badge": "Conjunction Commander",
-    "unlocksNextLesson": true
-  },
-  "nextLessonId": "grade5-compound-sentences"
+    "points": 25,
+    "badge": "Conjunction Commander"
+  }
 }
 

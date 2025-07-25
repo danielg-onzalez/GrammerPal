@@ -1,12 +1,12 @@
 
     {
-  "id": "grade3-subject-verb-agreement",
+  "id": "grade3-lesson1-subject-verb-agreement",
   "title": "Matching Subjects and Verbs",
   "gradeLevels": [3],
   "subject": "Grammar",
   "topic": "Subject-Verb Agreement",
   "objective": "Students will match singular and plural subjects with the correct present-tense verbs.",
-  "estimatedDurationMinutes": 15,
+  "estimatedDurationMinutes": 7,
   "lessonFlow": [
     {
       "type": "introduction",
@@ -36,8 +36,9 @@
             "They walk home.",
             "They walking home."
           ],
-          "correctIndex": 1,
-          "explanation": "Plural subjects use the base form of the verb."
+          "answer": "B",
+          "explanation": "Plural subjects use the base form of the verb.",
+          "rightAnswer": "Correct!"
         }
       ]
     },
@@ -46,14 +47,15 @@
       "questions": [
         {
           "question": "She ___ (like) pizza.",
-          "answer": "likes"
+          "explanation": "Remeber, you need to make the word plural!",
+          "answer": "likes",
+          "rightAnswer": "Correct!"
         }
       ]
     },
     {
       "type": "aiPrompt",
-      "instruction": "Write a sentence using a singular subject and verb that ends in -s.",
-      "aiEvaluation": true
+      "instruction": "Write a sentence using a singular subject and verb that ends in -s."
     },
     {
       "type": "feedback",
@@ -61,10 +63,8 @@
     }
   ],
   "rewards": {
-    "points": 40,
-    "badge": "Verb Master",
-    "unlocksNextLesson": true
-  },
-  "nextLessonId": "grade3-past-tense-verbs"
+    "points": 25,
+    "badge": "Verb Master"
+  }
 }
 

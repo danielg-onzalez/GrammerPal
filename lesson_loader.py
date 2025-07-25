@@ -29,8 +29,8 @@ def display_lesson(username, lesson):
         if section["type"] == "introduction":
             print(section["content"])
 
-        # Rule Explination 
-        elif section["type"] == "explination":
+        # Rule explanation 
+        elif section["type"] == "explanation":
             for rule in section["rules"]:
                 print(f"Rule: {rule['rule']}")
                 print(f"Example: {rule['example']}")
@@ -55,7 +55,7 @@ def display_lesson(username, lesson):
                             break
                         
                     # If not right awnser, explain
-                    print(f"{act['explination']}")
+                    print(f"{act['explanation']}")
                     
                 # Print right answer and go on to next
                 print(act['rightAnswer'])
@@ -71,8 +71,8 @@ def display_lesson(username, lesson):
                     if choice == q['answer']:
                         break
                     
-                    # If wrong print explination
-                    print(q['explination'])  
+                    # If wrong print explanation
+                    print(q['explanation'])  
                 
                 # Print right answer and go on to next
                 print(act['rightAnswer'])  
