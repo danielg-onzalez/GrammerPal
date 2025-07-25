@@ -11,7 +11,7 @@ rules = "Rules for response: Keep response short, be precise and and friendly, d
 ask_prompt = "You are a tutor for elemenatary school students. Please provide an engaging and child freindly response to the following question:"
 def ask_ai_general(connection, username, user_prompt):
     response = client.models.generate_content(
-        model="gemini-2.5-flash", contents=f"{rules} {ask_prompt} Your students name is {username}. {get_parental_control_level(username)} {user_prompt}"
+        model="gemini-2.5-flash", contents=f"{rules} {ask_prompt} Your students name is {username}. {get_parental_control_prompt_settings(connection, username)} {user_prompt}"
     )
     return response.text
 
