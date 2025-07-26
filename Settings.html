@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Settings | GrammarPal</title>
   <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/settings.css" />
 </head>
 <body>
 <header class="header">
@@ -13,24 +14,39 @@
 
 <main class="settings-container">
   <section class="settings-card">
-    <label for="theme">Theme:</label>
-    <select id="theme">
-      <option>Light</option>
-      <option>Dark</option>
-    </select>
+    <form>
+      <label for="theme">Theme:</label>
+      <select id="theme" name="theme">
+        <option>Light</option>
+        <option>Dark</option>
+      </select>
 
-    <label for="notifications">Notifications:</label>
-    <input type="checkbox" id="notifications" checked /> Enable
+      <label for="notifications">Notifications:</label>
+      <div class="checkbox-group">
+        <input type="checkbox" id="notifications" name="notifications" checked />
+        <span>Enable</span>
+      </div>
 
-    <label for="language">Language:</label>
-    <select id="language">
-      <option>English</option>
-      <option>Spanish</option>
-    </select>
+      <label for="language">Language:</label>
+      <select id="language" name="language">
+        <option>English</option>
+        <option>Spanish</option>
+      </select>
 
-    <button onclick="window.location.href='dashboard.html'">Back to Dashboard</button>
+      <label for="volume">Volume:</label>
+      <input type="range" id="volume" name="volume" min="0" max="100" value="50" oninput="updateVolumeLabel(this.value)" />
+      <p class="volume-label">Current Volume: <span id="volume-value">50</span>%</p>
+
+      <button type="submit">Save Settings</button>
+      <button type="button" onclick="window.location.href='dashboard.html'">Back to Dashboard</button>
+    </form>
   </section>
 </main>
+
+<script>
+  function updateVolumeLabel(value) {
+    document.getElementById('volume-value').textContent = value;
+  }
+</script>
 </body>
 </html>
-
