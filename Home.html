@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GrammarPal | Home</title>
+
+  <!-- External Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/login.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sniglet&display=swap">
+</head>
+<body>
+
+<!-- Navigation -->
+<header class="top-bar">
+  <div>
+    <a href="Home.html" class="logo">✦ GrammarPal Learning Tool ✦</a>
+  </div>
+  <nav class="auth-buttons">
+    <a href="Home.html" class="Home-btn">Home</a>
+    <a href="About.html" class="About-btn">About</a>
+    <a href="Login.html" class="Login-btn">Login / Sign Up</a>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <h1>Welcome to GrammarPal</h1>
+  <p>Your smart companion for mastering grammar, writing, and communication.</p>
+  <a href="Login.html" class="cta-button">Get Started</a>
+</section>
+
+<!-- Main Content: Joke Tree Left, Features Right -->
+<div class="main-content">
+
+  <!-- Joke Tree Section -->
+  <div class="joke-tree">
+    <img src="img/tree-svgrepo-com-removebg-preview.png" height="500" width="500" alt="GrammarPal Tree" class="tree-image">
+
+    <div class="leaf" style="top: 50px; left: 80px;" onclick="showJoke('Why did the comma break up with the sentence? Because it had too many clauses!')"></div>
+    <div class="leaf" style="top: 120px; left: 200px;" onclick="showJoke('Why was the adjective sad? Because it couldn’t modify anything!')"></div>
+    <div class="leaf" style="top: 180px; left: 150px;" onclick="showJoke('What do you call Santa when he stops moving? A clause!')"></div>
+  </div>
+
+  <!-- Features Section -->
+  <section class="features">
+    <h2>What You Can Do</h2>
+    <ul>
+      <li>📚 Access Interactive Grammar Lessons</li>
+      <li>🤖 Ask Our AI Tutor, Your Grammar Questions</li>
+      <li>📝 Practice Exercises with Feedback</li>
+      <li>👨‍👩‍👧‍👦 Parental Controls (coming soon!)</li>
+    </ul>
+  </section>
+
+</div>
+
+<!-- Joke Popup Box -->
+<div id="joke-box" class="joke-box" onclick="hideJoke()">
+  <p id="joke-text"></p>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>Have questions? <a href="mailto:support@grammarpal.com">Contact us</a></p>
+  <p>&copy; 2025 GrammarPal. All rights reserved.</p>
+</footer>
+
+<!-- JavaScript -->
+<script>
+  function showJoke(joke) {
+    document.getElementById("joke-text").innerText = joke;
+    document.getElementById("joke-box").style.display = "block";
+  }
+
+  function hideJoke() {
+    document.getElementById("joke-box").style.display = "none";
+  }
+</script>
+
+</body>
+</html>

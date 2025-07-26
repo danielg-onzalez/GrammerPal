@@ -1,0 +1,68 @@
+/* profile-settings.css */
+
+body {
+  margin: 0;
+  font-family: 'Arial Rounded MT Bold', sans-serif;
+  background-color: #f3f3f3;
+}
+
+.header {
+  background-color: #f3f3f3;
+  padding: 10px;
+  text-align: center;
+  font-size: 24px;
+  color: #555;
+}
+
+.profile-container,
+.settings-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.profile-card,
+.settings-card {
+  background-color: #fff;
+  border: 3px dashed #ffd700;
+  border-radius: 25px;
+  padding: 30px 50px;
+  text-align: center;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card h2,
+.settings-card label {
+  color: #333;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.profile-card p {
+  color: #666;
+  margin: 8px 0;
+}
+
+.settings-card select,
+.settings-card input[type="checkbox"] {
+  margin-bottom: 20px;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ffdd33;
+}
