@@ -1,0 +1,159 @@
+/* Base styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f3ffe3;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation */
+.top-nav {
+  background-color: #00a8c5;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.top-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.top-nav a.active {
+  text-decoration: underline;
+}
+
+/* Container */
+.AboutContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+/* Mission Section */
+.mission-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  padding: 40px;
+  margin-bottom: 40px;
+  border: 5px dashed #00a7c3;
+}
+
+.hero img {
+  width: 350px;
+  height: auto;
+  border-radius: 50% 50% 0 50% / 50% 50% 50% 0;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
+  margin-right: 30px;
+}
+
+.mission-box {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  background-color: #fce4ec;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: inset 0 0 0 5px #fff6fa;
+  position: relative;
+}
+
+.mission-box::before {
+  content: "📘";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  font-size: 40px;
+}
+
+.mission-text h3{
+  padding-bottom: 10px;
+  color: #00a7c3;
+  font-size: 25px;
+}
+
+.mission-box h2 {
+  font-size: 42px;
+  color: #00a7c3;
+  margin-bottom: 20px;
+}
+
+.mission-box p {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+/* Features Section */
+.features {
+  background-color: #ffffff;
+  border: 4px dotted #00a7c3;
+  border-radius: 25px;
+  padding: 35px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.features::before {
+  content: "⭐";
+  font-size: 30px;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+}
+
+.features h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #00a7c3;
+}
+
+.features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.features li {
+  font-size: 20px;
+  background-color: #e7ffd1;
+  margin: 10px 0;
+  padding: 12px 20px;
+  border-left: 8px solid #00a8c5;
+  border-radius: 10px;
+  position: relative;
+  padding-left: 50px;
+}
+
+.features li::before {
+  content: "🐝";
+  position: absolute;
+  left: 15px;
+  top: 12px;
+  font-size: 22px;
+}
+
+/* Footer */
+.footer {
+  background-color: #00a8c5;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
+  margin-top: 60px;
+  border-top: 5px dotted white;
+}
+
+.footer a {
+  color: #fdfdfd;
+  text-decoration: underline;
+}
