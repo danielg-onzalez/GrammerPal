@@ -1,0 +1,65 @@
+
+    {
+  "id": "grade4-lesson1-past-tense",
+  "title": "Using Past Tense Verbs",
+  "gradeLevels": [4],
+  "subject": "Grammar",
+  "topic": "Past Tense",
+  "objective": "Students will convert regular verbs to past tense and identify irregular verbs.",
+  "estimatedDurationMinutes": 8,
+  "lessonFlow": [
+    {
+      "type": "introduction",
+      "content": "Let’s talk about things that already happened!"
+    },
+    {
+      "type": "explanation",
+      "rules": [
+        {
+          "rule": "Add -ed to regular verbs.",
+          "example": "We walk → We walked"
+        },
+        {
+          "rule": "Some verbs change completely (irregular).",
+          "example": "Go → Went"
+        }
+      ]
+    },
+    {
+      "type": "practice",
+      "activities": [
+        {
+          "activityType": "fillInTheBlank",
+          "sentence": "Yesterday, I ___ (play) soccer.",
+          "answer": "played",
+          "explanation": "Regular verb, just add -ed.",
+          "rightAnswer": "Correct!"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "questions": [
+        {
+          "question": "She ___ (go) to the store.",
+          "explanation": "It's past tense. Example: I am bending metal -> I bent metal.",
+          "rightAnswer": "Correct!",
+          "answer": "went"
+        }
+      ]
+    },
+    {
+      "type": "aiPrompt",
+      "instruction": "Write two past tense sentences using both a regular and irregular verb."
+    },
+    {
+      "type": "feedback",
+      "message": "You're mastering the past!"
+    }
+  ],
+  "rewards": {
+    "points": 25,
+    "badge": "Time Traveler"
+  }
+}
+
