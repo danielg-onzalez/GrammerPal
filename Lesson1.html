@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lesson 1: Introduction to Verbs | GrammarPal</title>
+  <link rel="stylesheet" href="css/chatbot.css" />
+  <link rel="stylesheet" href="css/lesson1.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+<div class="container">
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <a href="Dashboard.html" class="msb-link">
+      <img src="img/Miss Bee.png" alt="Ms. B AI Tutor" />
+      <h2>Ms.B AI Tutor</h2>
+    </a>
+    <button onclick="window.location.href='Profile.html'">PROFILE</button>
+    <button onclick="window.location.href='Dashboard.html'">HOME</button>
+    <button onclick="window.location.href='Settings.html'">SETTINGS</button>
+    <button onclick="window.location.href='Login.html'">EXIT</button>
+  </div>
+
+  <!-- Main Lesson Content -->
+  <main class="lesson-content">
+    <h1>Lesson 1: What Is a Verb?</h1>
+    <p class="intro-text">
+      A verb is a word that shows an <strong>action</strong> or a <strong>state of being</strong>.
+      Verbs are the heart of every sentence!
+    </p>
+
+    <div class="example-box">
+      <p>🦋 Example 1: <strong>She <u>runs</u> fast.</strong> → "runs" is a verb (action)</p>
+      <p>🎈 Example 2: <strong>They <u>are</u> happy.</strong> → "are" is a verb (state of being)</p>
+    </div>
+
+    <div class="quiz-section">
+      <h2>🎯 Try This!</h2>
+      <p>Which word is the verb in this sentence?</p>
+      <p class="quiz-sentence">"The cat <strong>jumps</strong> on the bed."</p>
+
+      <div class="options">
+        <button onclick="checkAnswer(this)">cat</button>
+        <button onclick="checkAnswer(this)">jumps</button>
+        <button onclick="checkAnswer(this)">bed</button>
+      </div>
+
+      <p id="feedback" class="feedback"></p>
+    </div>
+  </main>
+</div>
+
+<script>
+  function checkAnswer(button) {
+    const feedback = document.getElementById('feedback');
+    if (button.textContent === "jumps") {
+      feedback.textContent = "✅ Correct! 'jumps' is the action.";
+      feedback.style.color = "green";
+    } else {
+      feedback.textContent = "❌ Try again! Look for the action word.";
+      feedback.style.color = "red";
+    }
+  }
+</script>
+</body>
+</html>
