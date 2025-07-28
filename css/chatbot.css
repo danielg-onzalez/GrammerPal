@@ -13,14 +13,14 @@ body {
 
 /* Sidebar */
 .sidebar {
+  width: 200px; /* or 100px if you prefer */
   background-color: #ffd86a;
-  width: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
+  flex-shrink: 0;
 }
-
 .sidebar-btn {
   background-color: #fff;
   border: none;
@@ -45,7 +45,15 @@ body {
   flex-direction: column;
   background-color: #e8ffcc;
   padding: 20px;
+  box-sizing: border-box;
 }
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
+
 
 /* Header */
 .chat-header {
@@ -133,4 +141,22 @@ body {
   border-radius: 0 20px 20px 0;
   cursor: pointer;
   font-size: 18px;
+}
+/*Miss Bee*/
+.msb-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.msb-link:hover img {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.msb-link:hover h2 {
+  color: #c94d00;
 }
