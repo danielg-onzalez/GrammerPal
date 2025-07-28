@@ -53,6 +53,29 @@ body {
   width: 100vw;
   margin: 0;
 }
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.chat-main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #e8ffcc;
+  padding: 20px;
+}
+
+.chat-content {
+  flex-grow: 1;
+  overflow-y: auto;
+}
 
 
 /* Header */

@@ -131,6 +131,49 @@ body {
   z-index: 1;
 }
 
+.road-container {
+  position: relative;
+  background-color: #c7f3a7;
+  flex-grow: 1;
+  border-radius: 20px;
+  box-shadow: inset 0 0 15px #9cd35c;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.road-svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* Stars stay above the road */
+.star {
+  width: 35px;
+  height: 35px;
+  background: gold;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  position: absolute;
+  z-index: 1;
+}
+
 /* Bus also on top */
 .bus {
   position: absolute;

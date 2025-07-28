@@ -10,48 +10,70 @@
   <link rel="stylesheet" href="css/about.css" />
   <link rel="stylesheet" href="css/home.css" />
   <link rel="stylesheet" href="css/dashboard.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+  </style>
 </head>
 <body>
 
 <div class="container">
-<div class="sidebar">
-  <a href="Dashboard.html" class="msb-link">
-    <img src="img/Miss Bee.png" alt="Ms. B AI Tutor" />
-
-  <h2> Ms.B AI Tutor </h2>
-  <button onclick="window.location.href='Profile.html'">PROFILE</button>
-  <button onclick="window.location.href='Dashboard.html'">HOME</button>
-  <button onclick="window.location.href='Settings.html'">SETTINGS</button>
-  <button onclick="window.location.href='Login.html'">EXIT</button>
-</div>
+  <div class="sidebar">
+    <a href="Dashboard.html" class="msb-link">
+      <img src="img/Miss Bee.png" alt="Ms. B AI Tutor" />
+      <h2> Ms.B AI Tutor </h2>
+    </a>
+    <button onclick="window.location.href='Profile.html'">PROFILE</button>
+    <button onclick="window.location.href='Dashboard.html'">HOME</button>
+    <button onclick="window.location.href='Settings.html'">SETTINGS</button>
+    <button onclick="window.location.href='Login.html'">EXIT</button>
+  </div>
 
   <main class="chat-main">
     <header class="chat-header">
       <div class="tutor-profile">
-
-        <img src="img/Miss Bee.png"  alt="Ms. B" class="avatar" />
+        <img src="img/Miss Bee.png" alt="Ms. B" class="avatar" />
         <span>Ms. B | AI Tutor</span>
       </div>
     </header>
 
-    <div class="chat-content">
-      <!-- <div class="chat-bubble user">Why do I have to say an apple but a banana?</div>
--->
+    <div class="chat-content" id="chat-content">
       <div class="chat-bubble ai">
         Hello! I am Miss Bee, your personal online tutor! What can I assist you with today?<br><br> 🍎 Let's figure it out together!
-       <!-- We use "an" before words that start with a vowel sound like "apple".<br><br>
-        Can you guess why we say "a banana" instead?<br>
-        Which letter does “banana” start with? -->
       </div>
-
       <div class="letter-box">B</div>
     </div>
 
-    <form class="chat-input">
-      <input type="text" placeholder="Ask me anything about words or sentences!" />
+    <form class="chat-input" id="chat-form">
+      <input type="text" id="user-input" placeholder="Ask me anything about words or sentences!" required />
       <button type="submit">➤</button>
     </form>
   </main>
 </div>
+
+<script>
+  const form = document.getElementById('chat-form');
+  const input = document.getElementById('user-input');
+  const chatContent = document.getElementById('chat-content');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // prevent reload
+
+    const message = input.value.trim();
+    if (message) {
+      const userBubble = document.createElement('div');
+      userBubble.className = 'chat-bubble user';
+      userBubble.textContent = message;
+
+      chatContent.appendChild(userBubble);
+      input.value = '';
+
+      // Scroll to bottom
+      chatContent.scrollTop = chatContent.scrollHeight;
+    }
+  });
+</script>
+
 </body>
 </html>

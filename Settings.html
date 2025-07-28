@@ -12,7 +12,7 @@
 
 </head>
 <body>
-
+<!--
 <div class="sidebar">
 
   <img src="img/Miss Bee.png"  alt="Ms. B AI Tutor" />
@@ -57,11 +57,34 @@
     </form>
   </section>
 </main>
-
 <script>
-  function updateVolumeLabel(value) {
-    document.getElementById('volume-value').textContent = value;
-  }
+  // Live preview of toggles
+  const notifToggle = document.getElementById('notifications');
+  const darkToggle = document.getElementById('darkmode');
+
+  notifToggle.addEventListener('change', () => {
+    document.querySelector('.live-notif').textContent = notifToggle.checked ? "ON" : "OFF";
+  });
+
+  darkToggle.addEventListener('change', () => {
+    document.querySelector('.live-dark').textContent = darkToggle.checked ? "ON" : "OFF";
+    document.body.classList.toggle('dark-theme', darkToggle.checked);
+  });
+
+  // Save message on submit
+  const settingsForm = document.getElementById('settings-form');
+  settingsForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const saveMsg = document.createElement('div');
+    saveMsg.textContent = "✅ Settings saved!";
+    saveMsg.classList.add('save-confirm');
+    settingsForm.appendChild(saveMsg);
+
+    setTimeout(() => {
+      saveMsg.remove();
+    }, 2000);
+  });
 </script>
+
 </body>
 </html>

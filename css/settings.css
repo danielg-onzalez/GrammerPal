@@ -109,3 +109,55 @@ button {
 button:hover {
   background-color: #ffea00;
 }
+.live-preview {
+  background-color: #e9f7ff;
+  border: 2px dashed #90caf9;
+  padding: 10px 15px;
+  border-radius: 12px;
+  margin-top: 20px;
+  font-size: 15px;
+  color: #333;
+}
+
+.save-confirm {
+  margin-top: 15px;
+  color: green;
+  font-weight: bold;
+  font-size: 16px;
+  animation: pop 0.5s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.8); opacity: 0; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+/* Tooltip */
+.setting-option {
+  position: relative;
+}
+
+.setting-option:hover::after {
+  content: attr(data-tip);
+  position: absolute;
+  top: -25px;
+  left: 10px;
+  background: #fffbcc;
+  color: #333;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 13px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+/* Optional: Dark Theme */
+.dark-theme {
+  background-color: #222;
+  color: #f0f0f0;
+}
+
+.dark-theme input,
+.dark-theme label {
+  color: #f0f0f0;
+}

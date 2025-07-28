@@ -16,7 +16,7 @@
   <section class="profile-card">
     <form id="profile-form" enctype="multipart/form-data">
       <div class="profile-pic-wrapper">
-        <img src="images/default-profile.png" alt="Profile Picture" id="profile-pic" />
+        <img src="images/default-profile.png"  id="profile-pic" />
         <input type="file" id="profile-pic-upload" name="profilePic" accept="image/*" />
       </div>
 
@@ -55,6 +55,33 @@
       reader.readAsDataURL(file);
     }
   });
+
+  // Live name + birthday preview
+  const usernameInput = document.getElementById('username');
+  const birthdayInput = document.getElementById('birthday');
+
+  usernameInput.addEventListener('input', () => {
+    document.querySelector('.live-name')?.textContent = usernameInput.value;
+  });
+
+  birthdayInput.addEventListener('input', () => {
+    document.querySelector('.live-birthday')?.textContent = birthdayInput.value;
+  });
+
+  // Fun save message
+  const form = document.getElementById('profile-form');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const saveMsg = document.createElement('div');
+    saveMsg.textContent = "✅ Profile saved!";
+    saveMsg.classList.add('save-confirm');
+    form.appendChild(saveMsg);
+
+    setTimeout(() => {
+      saveMsg.remove();
+    }, 2000);
+  });
 </script>
+
 </body>
 </html>
